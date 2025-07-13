@@ -15,6 +15,13 @@
       "when": 1752356906377,
       "tag": "0001_outgoing_pete_wisdom",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752375635644,
+      "tag": "0002_aberrant_sir_ram",
+      "breakpoints": true
     }
   ]
 }

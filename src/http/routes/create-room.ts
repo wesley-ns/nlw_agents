@@ -19,13 +19,16 @@ export const createRoomRoute: FastifyPluginCallbackZod = (app) => {
 
       const result = await db
         .insert(schema.rooms)
-        .values({ name, description })
+        .values({
+          name,
+          description,
+        })
         .returning();
 
       const insertedRoom = result[0];
 
       if (!insertedRoom) {
-        throw new Error('Failed to create new room');
+        throw new Error('Failed to create new room.');
       }
 
       return reply.status(201).send({ roomId: insertedRoom.id });
